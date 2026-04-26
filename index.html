@@ -1,56 +1,70 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-page="home">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CarbuPrix - Support</title>
   <meta name="description" content="Support officiel de CarbuPrix : assistance, informations, confidentialite et app-ads.txt.">
   <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
 </head>
 <body>
   <div class="bg-layer"></div>
   <header class="topbar shell">
-    <a class="brand" href="./index.html">CarbuPrix</a>
+    <a class="brand" href="./index.html" data-i18n="brand">CarbuPrix</a>
+
     <nav class="nav">
-      <a href="./support.html">Support</a>
-      <a href="./privacy.html">Confidentialite</a>
-      <a href="./app-ads.txt">app-ads.txt</a>
+      <a href="./support.html" data-i18n="nav_support">Support</a>
+      <a href="./privacy.html" data-i18n="nav_privacy">Confidentialite</a>
+      <a href="./app-ads.txt" data-i18n="nav_ads">app-ads.txt</a>
     </nav>
+
+    <div class="right-controls">
+      <button id="theme-toggle" class="control-btn" type="button" data-i18n-aria-label="theme"></button>
+      <label class="sr-only" for="lang-select" data-i18n="lang_label">Langue</label>
+      <select id="lang-select" class="control-select" aria-label="Language">
+        <option value="fr" data-i18n="lang_fr">Francais</option>
+        <option value="en" data-i18n="lang_en">Anglais</option>
+        <option value="es" data-i18n="lang_es">Espagnol</option>
+      </select>
+    </div>
   </header>
 
   <main class="shell">
     <section class="hero">
-      <p class="eyebrow">Application iOS</p>
-      <h1>Trouvez rapidement le meilleur prix carburant</h1>
-      <p class="subtitle">Page officielle de support CarbuPrix. Vous trouverez ici les informations utiles pour l'assistance, la confidentialite et l'identification publicitaire.</p>
+      <p class="eyebrow" data-i18n="home_eyebrow">Application iOS</p>
+      <h1 data-i18n="home_title">Trouvez rapidement le meilleur prix carburant</h1>
+      <p class="subtitle" data-i18n="home_subtitle">Page officielle de support CarbuPrix. Vous trouverez ici les informations utiles pour l'assistance, la confidentialite et l'identification publicitaire.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="./support.html">Obtenir de l'aide</a>
-        <a class="btn btn-ghost" href="./privacy.html">Lire la confidentialite</a>
+        <a class="btn btn-primary" href="./support.html" data-i18n="home_cta_help">Obtenir de l'aide</a>
+        <a class="btn btn-ghost" href="./privacy.html" data-i18n="home_cta_privacy">Lire la confidentialite</a>
       </div>
     </section>
 
     <section class="grid">
       <article class="card">
-        <h2>Support</h2>
-        <p>Besoin d'aide, signaler un bug ou proposer une amelioration ?</p>
-        <a class="link" href="./support.html">Aller a la page support</a>
+        <h2 data-i18n="home_card_support_title">Support</h2>
+        <p data-i18n="home_card_support_body">Besoin d'aide, signaler un bug ou proposer une amelioration ?</p>
+        <a class="link" href="./support.html" data-i18n="home_card_support_link">Aller a la page support</a>
       </article>
+
       <article class="card">
-        <h2>Confidentialite</h2>
-        <p>Consultez les informations generales sur le traitement des donnees.</p>
-        <a class="link" href="./privacy.html">Voir la page confidentialite</a>
+        <h2 data-i18n="home_card_privacy_title">Confidentialite</h2>
+        <p data-i18n="home_card_privacy_body">Consultez les informations generales sur le traitement des donnees.</p>
+        <a class="link" href="./privacy.html" data-i18n="home_card_privacy_link">Voir la page confidentialite</a>
       </article>
+
       <article class="card">
-        <h2>Verification AdMob</h2>
-        <p>Le fichier app-ads.txt requis pour AdMob est publie et accessible publiquement.</p>
-        <a class="link mono" href="./app-ads.txt">/app-ads.txt</a>
+        <h2 data-i18n="home_card_ads_title">Verification AdMob</h2>
+        <p data-i18n="home_card_ads_body">Le fichier app-ads.txt requis pour AdMob est publie et accessible publiquement.</p>
+        <a class="link mono" href="./app-ads.txt" data-i18n="home_card_ads_link">/app-ads.txt</a>
       </article>
     </section>
   </main>
 
   <footer class="shell footer">
-    <p>CarbuPrix</p>
-    <p class="muted">Support public pour App Store et AdMob.</p>
+    <p data-i18n="brand">CarbuPrix</p>
+    <p class="muted" data-i18n="home_footer_note">Support public pour App Store et AdMob.</p>
   </footer>
 </body>
 </html>

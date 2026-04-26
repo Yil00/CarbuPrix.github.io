@@ -1,45 +1,57 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-page="support">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CarbuPrix - Support</title>
   <meta name="description" content="Support CarbuPrix : assistance et questions frequentes.">
   <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
 </head>
 <body>
   <div class="bg-layer"></div>
   <header class="topbar shell">
-    <a class="brand" href="./index.html">CarbuPrix</a>
+    <a class="brand" href="./index.html" data-i18n="brand">CarbuPrix</a>
+
     <nav class="nav">
-      <a href="./support.html">Support</a>
-      <a href="./privacy.html">Confidentialite</a>
-      <a href="./app-ads.txt">app-ads.txt</a>
+      <a href="./support.html" data-i18n="nav_support">Support</a>
+      <a href="./privacy.html" data-i18n="nav_privacy">Confidentialite</a>
+      <a href="./app-ads.txt" data-i18n="nav_ads">app-ads.txt</a>
     </nav>
+
+    <div class="right-controls">
+      <button id="theme-toggle" class="control-btn" type="button" data-i18n-aria-label="theme"></button>
+      <label class="sr-only" for="lang-select" data-i18n="lang_label">Langue</label>
+      <select id="lang-select" class="control-select" aria-label="Language">
+        <option value="fr" data-i18n="lang_fr">Francais</option>
+        <option value="en" data-i18n="lang_en">Anglais</option>
+        <option value="es" data-i18n="lang_es">Espagnol</option>
+      </select>
+    </div>
   </header>
 
   <main class="shell">
     <section class="content">
-      <p class="eyebrow">Support</p>
-      <h1>Aide et assistance</h1>
-      <p class="subtitle">Pour signaler un bug, poser une question ou proposer une amelioration, utilisez le canal ci-dessous.</p>
+      <p class="eyebrow" data-i18n="support_eyebrow">Support</p>
+      <h1 data-i18n="support_title">Aide et assistance</h1>
+      <p class="subtitle" data-i18n="support_subtitle">Pour signaler un bug, poser une question ou proposer une amelioration, utilisez le canal ci-dessous.</p>
 
       <p>
-        <a class="btn btn-primary" href="https://github.com/Yil00/IOS-CarbuPrix/issues/new/choose">Ouvrir une demande de support</a>
+        <a class="btn btn-primary" href="https://github.com/Yil00/IOS-CarbuPrix/issues/new/choose" data-i18n="support_open_ticket">Ouvrir une demande de support</a>
       </p>
 
-      <h2>Questions frequentes</h2>
+      <h2 data-i18n="support_faq_title">Questions frequentes</h2>
       <ul class="list">
-        <li>Les pubs freemium peuvent ne pas s'afficher en continu si le reseau publicitaire ne retourne pas d'inventaire (no fill).</li>
-        <li>Le mode Premium peut etre masque en version release selon les contraintes de publication App Store.</li>
-        <li>Les donnees stations peuvent varier selon la source et la localisation choisie.</li>
+        <li data-i18n="support_faq_q1">Les pubs freemium peuvent ne pas s'afficher en continu si le reseau publicitaire ne retourne pas d'inventaire (no fill).</li>
+        <li data-i18n="support_faq_q2">Le mode Premium peut etre masque en version release selon les contraintes de publication App Store.</li>
+        <li data-i18n="support_faq_q3">Les donnees stations peuvent varier selon la source et la localisation choisie.</li>
       </ul>
     </section>
   </main>
 
   <footer class="shell footer">
-    <p>CarbuPrix</p>
-    <p class="muted">Support via GitHub Issues.</p>
+    <p data-i18n="brand">CarbuPrix</p>
+    <p class="muted" data-i18n="support_footer_note">Support via GitHub Issues.</p>
   </footer>
 </body>
 </html>
